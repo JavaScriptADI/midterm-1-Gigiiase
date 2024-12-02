@@ -108,7 +108,7 @@ function christmasDay() {
 const today = new Date(); 
 const christmas = new Date(today.getFullYear(), 11, 25); 
 if (today > christmas) {
-console.log()
+console.log();
 }
 }  
 //    icannnnnttt idont understand
