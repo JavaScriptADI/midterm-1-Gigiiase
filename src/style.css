@@ -1,0 +1,17 @@
+body {
+background-color: blanchedalmond;
+}
+h1, h3, p {
+    color: red;
+}
+button{
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: red;
+}
+input {
+    background-color: inherit;
+    border-radius: 5px;
+    border-color: red;
+}
