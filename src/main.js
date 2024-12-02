@@ -11,7 +11,7 @@ const output = `დღეს არის ${todayIs}. ხოლო მიმდ�
 console.log(output);
 }
 determinationDate();
-2#
+// 2#
 function printContent() {
 window.print();
 }
@@ -238,7 +238,7 @@ console.log(`${ricxvi3}, ${ricxvi4} : ${checkNegativeorPositiv(ricxvi3, ricxvi4)
 console.log(`${ricxvi2}, ${ricxvi5} : ${checkNegativeorPositiv(ricxvi2, ricxvi5)}`);
 console.log(`${ricxvi1}, ${ricxvi4} : ${checkNegativeorPositiv(ricxvi1, ricxvi4)}`);
 // 21
-
+// ver movaswari da mivyvebi nel nelaa
 
 
 
