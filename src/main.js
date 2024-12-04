@@ -25,7 +25,7 @@ function currentDate() {
     const firstFormat = `${month}-${day}-${year}`;
     const secondFormat = `${month}/${day}/${year}`;
     console.log(`mm-dd-yyyy: ${firstFormat}`);
-    console.log(`mm/dd/yyyy: ${firstFormat}`);
+    console.log(`mm/dd/yyyy: ${secondFormat}`);
 }
 currentDate();
 // 4#
@@ -192,7 +192,7 @@ function difference19(number) {
         return 3 * difference;
     } 
     else {
-    return difference;
+        return difference;
     }
 }
 const nu1 = 15;
@@ -217,7 +217,7 @@ console.log(`შედეგი ${c}, ${d} არის : ${checkN(c, d)}`); //b
 console.log(`sum ${b}, ${c} is : ${checkN(b, c)}`);
 // 19
 function check20And100And400(numbers){
-return Math.abs(numbers - 100) <= 20 || Math.abs(numbers - 400) <= 20;
+    return Math.abs(numbers - 100) <= 20 || Math.abs(numbers - 400) <= 20;
 }
 let numbers1 = 40;
 let numbers2 = 100;
@@ -229,7 +229,7 @@ console.log(`არის ${numbers3} 20 ის 100 ის ან 400 ის ფ
 console.log(`არის ${numbers4} 20 ის 100 ის ან 400 ის ფარგლებში? ეს არის ${check20And100And400(numbers4)}`);
 // 20
 function checkNegativeorPositiv(ricxvi1, ricxvi2) {
-return (ricxvi1 > 0 && ricxvi2 < 0) || (ricxvi1 < 0 && ricxvi2 > 0);
+    return (ricxvi1 > 0 && ricxvi2 < 0) || (ricxvi1 < 0 && ricxvi2 > 0);
 }
 let ricxvi1 = 30;
 let ricxvi2 = -25;
