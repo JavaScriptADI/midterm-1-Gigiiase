@@ -1,7 +1,7 @@
 // Write your code here
 // #1 
 function determinationDate() {
-let nowIs = new Date();
+    let nowIs = new Date();
 const daysOfWeek = ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი" ];
 const todayIs = daysOfWeek[nowIs.getDay()];
 const hoursOfDays = nowIs.getHours();
