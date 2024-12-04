@@ -85,13 +85,13 @@ else{
 for(let year = 2014; year <= 2024; year++) {
     let date = new Date(year, 0, 1);
     if (date.getDay() === 0) {
-    console.log(`1st januari was in ${year} sunday`);
+        console.log(`1st januari was in ${year} sunday`);
     }
 }
 for(let year = 2024; year <= 2050; year++) {
     let date = new Date(year, 0, 1);
     if (date.getDay() === 0) {
-    console.log(`1st januari will be ${year} sunday`);
+        console.log(`1st januari will be ${year} sunday`);
     }
 }
 // 8
@@ -124,10 +124,10 @@ function calculate() {
 calculate();
 // 11
 function CtoF(celsius) {
-return (celsius * 9) / 5 + 32;
+    return (celsius * 9) / 5 + 32;
 }
 function FtoC(fahrenheit) {
-return ((fahrenheit - 32) * 5) / 9;
+    return ((fahrenheit - 32) * 5) / 9;
 }
 let celsius = 30;
 let fahrenheit = 80;
@@ -137,7 +137,7 @@ let celsiusResult = FtoC(fahrenheit);
 console.log(`${fahrenheit}°F is ${celsiusResult.toFixed(2)}°C`);
 //  12
 let url = window.location.href;
-    onsole.log(`this is your ${url}`);
+console.log(`this is your ${url}`);
 //  13
 // const variableName = prompt("შეიყვანე სახელი:");
 // const dynamicVariables = {};
@@ -147,7 +147,7 @@ let url = window.location.href;
 function getFileExtension(filename) {
     const extension = filename.split('.').pop();
     if (extension === filename) {
-    return "No extension found";
+        return "No extension found";
     }
     return extension;
 }
@@ -158,26 +158,26 @@ console.log(`The extension of "${filename1}" is: ${getFileExtension(filename1)}`
 console.log(`The extension of "${filename2}" is: ${getFileExtension(filename2)}`);
 console.log(`The extension of "${filename3}" is: ${getFileExtension(filename3)}`);   
 // 15
-    function difference(number) {
-        if (number > 13) {
-    return 2 * Math.abs(number - 13);   
+function difference(number) {
+    if (number > 13) {
+        return 2 * Math.abs(number - 13);   
     }
-        else {
-    return Math.abs(number - 13); 
-}
+    else {
+        return Math.abs(number - 13); 
+    }
 }
 const num1 = 13;
 const num2 = 20;
 console.log(`შედეგი არის ${num1} ის: ${difference(num1)}`);
 console.log(`შედეგი არის  ${num2} ის : ${difference(num2)}`);
 //   16
-    function computeSum(a, b) {
-        if (a === b) {
-    return 3 * (a + b); 
-}  
-        else {
-    return a + b; 
-}
+function computeSum(a, b) {
+    if (a === b) {
+        return 3 * (a + b); 
+    }  
+    else {
+        return a + b; 
+    }
 }
 const nums1 = 5;
 const nums2 = 5;
@@ -187,12 +187,13 @@ console.log(`The result for (${nums1}, ${nums2}) is: ${computeSum(nums1, nums2)}
 console.log(`The result for (${num3}, ${num4}) is: ${computeSum(num3, num4)}`); 
 //17
 function difference19(number) {
-const difference = Math.abs(number - 19);
-if (number > 19) {
-return 3 * difference;
-} else {
-return difference;
-}
+    const difference = Math.abs(number - 19);
+    if (number > 19) {
+        return 3 * difference;
+    } 
+    else {
+    return difference;
+    }
 }
 const nu1 = 15;
 const nu2 = 25;
@@ -200,12 +201,12 @@ console.log(`difference ${nu1} is: ${difference19(nu1)}`);
 console.log(`difference ${nu2} is: ${difference19(nu2)}`);
 //   18
 function checkN(a, b) {
-if(a === 50 || b === 50 || (a + b) === 50) {
-return true;
-}
-else {
-return false;
-}
+    if(a === 50 || b === 50 || (a + b) === 50) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 let a = 40;
 let b = 10;
