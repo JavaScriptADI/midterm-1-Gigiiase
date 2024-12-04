@@ -2,37 +2,37 @@
 // #1 
 function determinationDate() {
     let nowIs = new Date();
-const daysOfWeek = ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი" ];
-const todayIs = daysOfWeek[nowIs.getDay()];
-const hoursOfDays = nowIs.getHours();
-const minutesOfHours = nowIs.getMinutes();
-const secondOfMinuts = nowIs.getSeconds();
-const output = `დღეს არის ${todayIs}. ხოლო მიმდინარე დროა : ${hoursOfDays} : ${minutesOfHours} : ${secondOfMinuts}`;
-console.log(output);
+    const daysOfWeek = ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი" ];
+    const todayIs = daysOfWeek[nowIs.getDay()];
+    const hoursOfDays = nowIs.getHours();
+    const minutesOfHours = nowIs.getMinutes();
+    const secondOfMinuts = nowIs.getSeconds();
+    const output = `დღეს არის ${todayIs}. ხოლო მიმდინარე დროა : ${hoursOfDays} : ${minutesOfHours} : ${secondOfMinuts}`;
+    console.log(output);
 }
 determinationDate();
 // 2#
 function printContent() {
-window.print();
+    window.print();
 }
 printContent();
 // #3
 function currentDate() {
-const dateIs = new Date();
-const year = dateIs.getFullYear() ;
-const month = dateIs.getMonth() + 1; // meate tve dawera da davumate 1..
-const day = dateIs.getDay();  // magram dge ar dawera sworad... 
-const firstFormat = `${month}-${day}-${year}`;
-const secondFormat = `${month}/${day}/${year}`;
-console.log(`mm-dd-yyyy: ${firstFormat}`);
-console.log(`mm/dd/yyyy: ${firstFormat}`);
+    const dateIs = new Date();
+    const year = dateIs.getFullYear() ;
+    const month = dateIs.getMonth() + 1; // meate tve dawera da davumate 1..
+    const day = dateIs.getDay();  // magram dge ar dawera sworad... 
+    const firstFormat = `${month}-${day}-${year}`;
+    const secondFormat = `${month}/${day}/${year}`;
+    console.log(`mm-dd-yyyy: ${firstFormat}`);
+    console.log(`mm/dd/yyyy: ${firstFormat}`);
 }
 currentDate();
 // 4#
 function findArea(first, second, third) {
-const sum = (first + second + third) / 2;  //  anu sum = a + b + c / 2
-const area = Math.sqrt(sum * (sum - first) * (sum - second) * (sum - third));
-return area;
+    const sum = (first + second + third) / 2;  //  anu sum = a + b + c / 2
+    const area = Math.sqrt(sum * (sum - first) * (sum - second) * (sum - third));
+    return area;
 }                                                                //    es ver gavige kargad  
 const firstPart = 5;   
 const secondPart = 6;
@@ -48,51 +48,51 @@ console.log(`areas sum is : ${area.toFixed(2)}`);  // es xazi ver mivxvdi tofixe
 //     }, 1000); // Rotate every 500 milliseconds
 //   }
 //   rotateString("gigi");
- // vafshe ver gavige es 
+// vafshe ver gavige es 
 //  6
 function isLeap(year) {
-if ((year % 4 === 0 && year % 100 === 0)) {
-return true;
-}
-else {
-return false;
-}
+    if ((year % 4 === 0 && year % 100 === 0)) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 const year = 2024;  
 if (isLeap(year)) {
-console.log(`${year} : is a leap year`);
+    console.log(`${year} : is a leap year`);
 }
 else{
-console.log(`${year} isnot leap year`);
+    console.log(`${year} isnot leap year`);
 }
 //   exgample 2
 function isALeap(year1) {
-if ((year1 % 4 === 0 && year1 % 100 === 0)){
-return true;
-}
-else {
-return false;
-}
+    if ((year1 % 4 === 0 && year1 % 100 === 0)){
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 const year1 = 2000; 
 if(isALeap(year1)) {
     console.log(`${year1} is a leap`);
 }
 else{
-console.log(`${year1} is not a laep yaer`);
+    console.log(`${year1} is not a laep yaer`);
 }
 // 7
 for(let year = 2014; year <= 2024; year++) {
-let date = new Date(year, 0, 1);
-if (date.getDay() === 0) {
-console.log(`1st januari was in ${year} sunday`);
-}
+    let date = new Date(year, 0, 1);
+    if (date.getDay() === 0) {
+    console.log(`1st januari was in ${year} sunday`);
+    }
 }
 for(let year = 2024; year <= 2050; year++) {
-let date = new Date(year, 0, 1);
-if (date.getDay() === 0) {
-console.log(`1st januari will be ${year} sunday`);
-}
+    let date = new Date(year, 0, 1);
+    if (date.getDay() === 0) {
+    console.log(`1st januari will be ${year} sunday`);
+    }
 }
 // 8
 // const randomNumber = Math.floor(Math.random() * 10) + 1;
@@ -104,23 +104,24 @@ console.log(`1st januari will be ${year} sunday`);
 //     console.log(`try again it was ${randomNumber}`);
 // }
 // 9
-function christmasDay() {
-const today = new Date(); 
-const christmas = new Date(today.getFullYear(), 11, 25); 
-if (today > christmas) {
-console.log();
-}
-}  
+// function christmasDay() {
+// const today = new Date(); 
+// const christmas = new Date(today.getFullYear(), 11, 25); 
+// if (today > christmas) {
+// console.log();
+// }
+// }  
 //    icannnnnttt idont understand
 //   10
 function calculate() {
-const num1 = parseFloat(document.getElementById("number1").value);
-const num2 = parseFloat(document.getElementById("number2").value);
-const multiplication = num1 * num2;
-const division = num1 !== 0 ? num1 / num2 : "Cannot divide by zero";    
-document.getElementById("multiplicationResult").textContent = "Multiplication : " + multiplication;
-document.getElementById("divisionResult").textContent = "division : "+ division;
+    const num1 = parseFloat(document.getElementById("number1").value);
+    const num2 = parseFloat(document.getElementById("number2").value);
+    const multiplication = num1 * num2;
+    const division = num1 !== 0 ? num1 / num2 : "Cannot divide by zero";    
+    document.getElementById("multiplicationResult").textContent = "Multiplication : " + multiplication;
+    document.getElementById("divisionResult").textContent = "division : "+ division;
 }
+calculate();
 // 11
 function CtoF(celsius) {
 return (celsius * 9) / 5 + 32;
@@ -136,19 +137,19 @@ let celsiusResult = FtoC(fahrenheit);
 console.log(`${fahrenheit}°F is ${celsiusResult.toFixed(2)}°C`);
 //  12
 let url = window.location.href;
-console.log(`this is your ${url}`);
-    //  13
+    onsole.log(`this is your ${url}`);
+//  13
 // const variableName = prompt("შეიყვანე სახელი:");
 // const dynamicVariables = {};
 // dynamicVariables[variableName] = "This is a dynamically created variable";
 // console.log(`შენ შექმენი ცვლადი სახელად ${variableName}`);
 // 14
 function getFileExtension(filename) {
-const extension = filename.split('.').pop();
-if (extension === filename) {
-return "No extension found";
-}
-return extension;
+    const extension = filename.split('.').pop();
+    if (extension === filename) {
+    return "No extension found";
+    }
+    return extension;
 }
 const filename1 = "document.pdf";
 const filename2 = "image.jpeg";
@@ -157,12 +158,12 @@ console.log(`The extension of "${filename1}" is: ${getFileExtension(filename1)}`
 console.log(`The extension of "${filename2}" is: ${getFileExtension(filename2)}`);
 console.log(`The extension of "${filename3}" is: ${getFileExtension(filename3)}`);   
 // 15
-function difference(number) {
-if (number > 13) {
-return 2 * Math.abs(number - 13);   
-}
-else {
-return Math.abs(number - 13); 
+    function difference(number) {
+        if (number > 13) {
+    return 2 * Math.abs(number - 13);   
+    }
+        else {
+    return Math.abs(number - 13); 
 }
 }
 const num1 = 13;
@@ -170,11 +171,12 @@ const num2 = 20;
 console.log(`შედეგი არის ${num1} ის: ${difference(num1)}`);
 console.log(`შედეგი არის  ${num2} ის : ${difference(num2)}`);
 //   16
-function computeSum(a, b) {
-if (a === b) {
-return 3 * (a + b); 
-} else {
-return a + b; 
+    function computeSum(a, b) {
+        if (a === b) {
+    return 3 * (a + b); 
+}  
+        else {
+    return a + b; 
 }
 }
 const nums1 = 5;
@@ -183,7 +185,7 @@ const num3 = 7;
 const num4 = 10;
 console.log(`The result for (${nums1}, ${nums2}) is: ${computeSum(nums1, nums2)}`); 
 console.log(`The result for (${num3}, ${num4}) is: ${computeSum(num3, num4)}`); 
-//   17
+//17
 function difference19(number) {
 const difference = Math.abs(number - 19);
 if (number > 19) {
