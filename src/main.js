@@ -259,7 +259,7 @@ console.log(`${stringThird} = ${addPyHead(stringThird)}`);
 // 22
 function removeCharacter(str, index) {
     if (index < 0 || index >= str.length) {
-        return faild
+        return "faild";
     }
     else {
         return str.slice(0, index) + str.slice(index + 1);   // ეს ცოტა გამიჭირდა ისე დავამუღამე
@@ -293,10 +293,10 @@ console.log(`თავდაპირველად იყო "${thirdSityva}",
 // 24
 function addFrontAndBack(some) {
     if (some.length < 1) {
-        return "it must min 1"
+        return "it must min 1";
     }
     else {
-         const firstSome = some[0];
+        const firstSome = some[0];
         return firstSome + some + firstSome;
     }
 }
@@ -308,19 +308,19 @@ console.log(`at first was ${some2} but next became : ${addFrontAndBack(some2)}`)
 // 25
 function number3And7(cifri) {
     if (cifri <= 0) {
-        return "გთხოვთ ჩაწეროთ დადებითი რიცხვი"
+        return "გთხოვთ ჩაწეროთ დადებითი რიცხვი";
     }
     if (cifri % 3 === 0 || cifri % 7 === 0) {
-        return `შენი რიცხვი ${cifri} იყო და იყოფა 3 ზეც და 7 ზეც`
+        return `შენი რიცხვი ${cifri} იყო და იყოფა 3 ზეც და 7 ზეც`;
     }
     if (cifri % 3 === 0) {
-        return `შენი რიცხვი ${cifri} იყო და იყოფა მხოლოდ 3 ზე`
+        return `შენი რიცხვი ${cifri} იყო და იყოფა მხოლოდ 3 ზე`;
     }
     if (cifri % 7 === 0) {
-        return `შენი რიცხვი ${cifri} იყო და იყოფა მხოლოდ 7 ზე`
+        return `შენი რიცხვი ${cifri} იყო და იყოფა მხოლოდ 7 ზე`;
     }
     else {
-        return `შენი რიცხვი ${cifri} იყო და არიყოფა არცერთზე`
+        return `შენი რიცხვი ${cifri} იყო და არიყოფა არცერთზე`;
     }
 }
 console.log(number3And7(9));
