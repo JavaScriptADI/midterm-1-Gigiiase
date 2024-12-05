@@ -12,10 +12,10 @@ function determinationDate() {
 }
 determinationDate();
 // 2#
-function printContent() {
-    window.print();
-}
-printContent();
+// function printContent() {
+//     window.print();
+// }
+// printContent();
 // #3
 function currentDate() {
     const dateIs = new Date();
@@ -240,8 +240,106 @@ console.log(`${ricxvi1}, ${ricxvi2} : ${checkNegativeorPositiv(ricxvi1, ricxvi2)
 console.log(`${ricxvi3}, ${ricxvi4} : ${checkNegativeorPositiv(ricxvi3, ricxvi4)}`);
 console.log(`${ricxvi2}, ${ricxvi5} : ${checkNegativeorPositiv(ricxvi2, ricxvi5)}`);
 console.log(`${ricxvi1}, ${ricxvi4} : ${checkNegativeorPositiv(ricxvi1, ricxvi4)}`);
+
 // 21
-// ver movaswari da mivyvebi nel nelaa
+function addPyHead(string) {
+    if (string.startsWith("Py")) {
+        return string; 
+    } else {
+        return "Py" + string;
+    }
+}
+let stringFirst = "ramia";
+let stringSecond = "Pyramia";
+let stringThird = "zdarova";
+console.log(`${stringFirst} = ${addPyHead(stringFirst)}`); 
+console.log(`${stringSecond} = ${addPyHead(stringSecond)}`); 
+console.log(`${stringThird} = ${addPyHead(stringThird)}`); 
+
+// 22
+function removeCharacter(str, index) {
+    if (index < 0 || index >= str.length) {
+        return faild
+    }
+    else {
+        return str.slice(0, index) + str.slice(index + 1);   // ეს ცოტა გამიჭირდა ისე დავამუღამე
+    }
+}
+let str1 = "zdrastuite";
+let index1 = 2;
+console.log(`ორიგინალი ${str1}`);
+console.log(`და შეცვლილი : ${removeCharacter(str1, index1)}`);
+
+// 23
+function changeLastAndFirst(sityva) {
+    if (sityva.length < 1) {
+        return "It must be at least 1 character long."; 
+    }
+    if (sityva.length === 1) {
+        return sityva; 
+    }
+    let firstWord = sityva[0];
+    let lastWord = sityva[sityva.length - 1];
+    let middleStr = sityva.slice(1, sityva.length - 1);
+    return lastWord + middleStr + firstWord;
+}
+let firstSityva = "girlfriend";
+let secondSityva = "oe";
+let thirdSityva = "miatni";
+console.log(`თავდაპირველად იყო "${firstSityva}", და შემდეგ გახდა "${changeLastAndFirst(firstSityva)}".`);
+console.log(`თავდაპირველად იყო "${secondSityva}", და შემდეგ გახდა "${changeLastAndFirst(secondSityva)}".`);
+console.log(`თავდაპირველად იყო "${thirdSityva}", და შემდეგ გახდა "${changeLastAndFirst(thirdSityva)}".`);
+
+// 24
+function addFrontAndBack(some) {
+    if (some.length < 1) {
+        return "it must min 1"
+    }
+    else {
+         const firstSome = some[0];
+        return firstSome + some + firstSome;
+    }
+}
+let some1 = "Gai";
+let some2 = "gyji";
+console.log(`at first was ${some1} but next became : ${addFrontAndBack(some1)}`);
+console.log(`at first was ${some2} but next became : ${addFrontAndBack(some2)}`);
+
+// 25
+function number3And7(cifri) {
+    if (cifri <= 0) {
+        return "გთხოვთ ჩაწეროთ დადებითი რიცხვი"
+    }
+    if (cifri % 3 === 0 || cifri % 7 === 0) {
+        return `შენი რიცხვი ${cifri} იყო და იყოფა 3 ზეც და 7 ზეც`
+    }
+    if (cifri % 3 === 0) {
+        return `შენი რიცხვი ${cifri} იყო და იყოფა მხოლოდ 3 ზე`
+    }
+    if (cifri % 7 === 0) {
+        return `შენი რიცხვი ${cifri} იყო და იყოფა მხოლოდ 7 ზე`
+    }
+    else {
+        return `შენი რიცხვი ${cifri} იყო და არიყოფა არცერთზე`
+    }
+}
+console.log(number3And7(9));
+console.log(number3And7(14));
+console.log(number3And7(20));
+console.log(number3And7(28));
+console.log(number3And7(10));
+console.log(number3And7(-2));
+// 26
+
+
+
+
+
+
+
+
+
+
 
 
 
