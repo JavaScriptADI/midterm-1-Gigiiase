@@ -330,6 +330,80 @@ console.log(number3And7(28));
 console.log(number3And7(10));
 console.log(number3And7(-2));
 // 26
+function last3Char(rame) {
+    if (rame.length < 3) {
+        return "სიტყვის მინიმალური სიგრძე უნდა იყოს 3";
+    }
+    else {
+        const last3Char = rame.slice(-3);
+        return last3Char + rame + last3Char;
+}
+}
+console.log(last3Char("zura"));
+console.log(last3Char("marojni"));
+// 27
+function checkStart(word) {
+    if (word.startsWith("java")){
+        return `${word} იწყება java თი`;
+    }
+    else{
+        return `${word} ეს არიწყება java თი`;
+    }
+}
+console.log(checkStart("javaskript"));
+console.log(checkStart("zuraskript"));
+console.log(checkStart("javamedia"));
+// 28
+function checkIf50To99(g, f) {
+    if((g >= 50 && g <= 99)){
+        return `ეს რიცხვი არის 50 ის და 99 ის დიაპაზონში, შენი რიცხვი იყო ${g}`;
+    }
+    if((f >= 50 && f <= 99)){
+        return `ეს რიცხვი არის 50 ის და 99 ის დიაპაზონში, შენი რიცხვი იყო ${f}`;
+    }
+    else {
+        return `ეს რიცხვი არ არის 50 ის და 99 ის დიაპაზონში, შენი რიცხვები იყო ${g} და ${f}`;
+    }
+}
+console.log(checkIf50To99(70, 100));
+console.log(checkIf50To99(24, 55));
+console.log(checkIf50To99(99, 12));
+console.log(checkIf50To99(100, 34));
+// 29
+function check3Number(b, m, w) {
+    if((b >= 50 && b <= 99) || (m >= 50 && m <= 99) || (w >= 50 && w <= 99)) {
+        return true;
+    }
+    else{
+        return false;
+    } 
+
+}
+console.log(check3Number(25, 50, 100));
+console.log(check3Number(50, 70, 90));
+console.log(check3Number(25, 120, 100));
+// 30
+function removScript(amoshla){
+    if (amoshla.substring(4, 10) === "Script") {
+        return amoshla.substring(0, 4) + amoshla.substring(10);
+    }
+    else {
+        return amoshla;
+    }
+}
+console.log(removScript("endoScriptIsVeryGood"));
+console.log(removScript("ScriptIsVeryGood"));
+console.log(removScript("javaScriptIsABoring"));
+// 31
+
+
+
+    
+
+
+
+
+
 
 
 
