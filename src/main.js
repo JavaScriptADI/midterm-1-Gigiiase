@@ -337,7 +337,7 @@ function last3Char(rame) {
     else {
         const last3Char = rame.slice(-3);
         return last3Char + rame + last3Char;
-}
+    }
 }
 console.log(last3Char("zura"));
 console.log(last3Char("marojni"));
