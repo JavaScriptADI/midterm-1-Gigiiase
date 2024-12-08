@@ -396,7 +396,7 @@ console.log(removScript("ScriptIsVeryGood"));
 console.log(removScript("javaScriptIsABoring"));
 // 31
 function findLarg(p, o, i) {
-    return Math.max(p, o, i)
+    return Math.max(p, o, i);
 }
 console.log(findLarg(3, 6, 4));
 console.log(findLarg(3, 6, 9));
@@ -423,7 +423,7 @@ function check70to100(num10, num11) {
         return `your nums was inclusive 70-100, your num was ${num10} and ${num11}`;
     }
     return `your number is not unclusive 40-60 and 70-100. your nums were ${num10} and ${num11}`;
-    }
+}
 console.log(check70to100(50, 60));
 console.log(check70to100(70, 80));
 console.log(check70to100(60, 30));
@@ -444,8 +444,8 @@ function check2To4Inclusive(three, four) {
         return "სიტყვა არის ძალიან მოკლე";
     } 
     return three.includes(four) 
-    ? `ეს სიმბოლო "${four}" არსებობს შენს სიტყვაში 2 დან 4 ის ჩათვლით, შენი სიტყვა იყო "${three}"`
-    : `ეს სიმბოლო "${four}" არ არსებობს შენს სიტყვაში 2 დან 4 ის ჩათლით, შენი სიტყვა იყო "${three}"`
+        ? `ეს სიმბოლო "${four}" არსებობს შენს სიტყვაში 2 დან 4 ის ჩათვლით, შენი სიტყვა იყო "${three}"`
+        : `ეს სიმბოლო "${four}" არ არსებობს შენს სიტყვაში 2 დან 4 ის ჩათლით, შენი სიტყვა იყო "${three}"`;
 }
 console.log(check2To4Inclusive("mshvidobit", "v"));
 console.log(check2To4Inclusive("gamarjoba", "v"));
@@ -456,9 +456,9 @@ function chechLast(pirveli, meore, mesame) {
     let num30 = meore % 10;
     let num40 = mesame % 10;
     if (num20 === num30 && num30 === num40) {
-        return `your last digit is same`
+        return `your last digit is same`;
     }
-    return `your last digit isnot same, try again`
+    return `your last digit isnot same, try again`;
 }
 console.log(chechLast(111, 211, 311));
 console.log(chechLast(111, 211, 312));
@@ -478,18 +478,18 @@ console.log(conventHigtCase("gamrjoba"));
 function chechTotalMarks(jami, finaluri) {
     if (finaluri){
         return jami >= 90 
-        ? `congragulation you pass, your marks is A+, because you total marks was "${jami}"`
-        : `sorry You couldn't cross the barrier and recive it grade, your marks was "${jami}"`
+            ? `congragulation you pass, your marks is A+, because you total marks was "${jami}"`
+            : `sorry You couldn't cross the barrier and recive it grade, your marks was "${jami}"`;
     }
     else {
         return jami >= 89 && jami <= 100 
-        ? `congragulation you pass, your marks is A+, because you total marks was "${jami}"`
-        : `sorry You couldn't cross the barrier and recive it grade, your marks was "${jami}"`
+            ? `congragulation you pass, your marks is A+, because you total marks was "${jami}"`
+            : `sorry You couldn't cross the barrier and recive it grade, your marks was "${jami}"`;
     }
 }
-console.log(chechTotalMarks(89, "finaluri"))
-console.log(chechTotalMarks(89))
-console.log(chechTotalMarks(93, "final"))
+console.log(chechTotalMarks(89, "finaluri"));
+console.log(chechTotalMarks(89));
+console.log(chechTotalMarks(93, "final"));
 // 39
 function calculateSum(ten, twenty) {
     const sum = ten + twenty;
@@ -507,7 +507,7 @@ function checkIf8(num1, num2){
     if (num1 === 8 || num2 === 8 || num1 + num2 === 8 || Math.abs(num1 - num2) === 8){
         return true;
     }
-        return false;
+    return false;
 }
 console.log(checkIf8(4, 4)); // sum is 8
 console.log(checkIf8(8, 4)); //first is 8
@@ -548,9 +548,9 @@ function chechLastDigit(pirv, meore, mesame) {
     let num1 = pirv % 10;
     let num2 = meore % 10;    // bolo cifrs ase vigeb
     let num3 = mesame % 10;
-if (num1 === num2 || num2 === num3 || num1 === num3){
-    return "last digit is same";
-}
+    if (num1 === num2 || num2 === num3 || num1 === num3){
+        return "last digit is same";
+    }
     return "try again";
 }
 console.log(chechLastDigit(22, 32, 202));
@@ -561,11 +561,11 @@ function check20(num, num2, num3) {
     if ((num1 >= 20 && (num1 < num2 || num1 < num3)) || 
         (num2 >= 20 && (num2 < num1 || num2 < num3)) ||
         (num3 > 20 && (num3 < num1 || num3 < num2))) {
-            return "malaci"
-        }
+        return "malaci";
+    }
     else{
-            return false;
-        }
+        return false;
+    }
 }
 console.log(check20(23, 20, 22));
 console.log(check20(16, 10, 12));
@@ -575,7 +575,7 @@ function checkIf15(num1, num2){
     if (num1 === 15 || num2 === 15 || num1 + num2 === 15 || Math.abs(num1 - num2) === 15){
         return true;
     }
-        return false;
+    return false;
 }
 console.log(checkIf15(15, 15)); 
 console.log(checkIf15(8, 15)); 
