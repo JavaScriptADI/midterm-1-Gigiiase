@@ -395,6 +395,163 @@ console.log(removScript("endoScriptIsVeryGood"));
 console.log(removScript("ScriptIsVeryGood"));
 console.log(removScript("javaScriptIsABoring"));
 // 31
+function findLarg(p, o, i) {
+    return Math.max(p, o, i)
+}
+console.log(findLarg(3, 6, 4));
+console.log(findLarg(3, 6, 9));
+console.log(findLarg(7, 6, 4));
+// 32
+function findNear100(k, l) {
+    const first100 = Math.abs(100 - k); 
+    const second100 = Math.abs(100 - l);
+    if (first100 < second100) {
+        return `უფრო ახლოს იყო ${k} , მეორე რიცხვი იყო ${l}`;
+    }
+    if (first100 > second100) {
+        return `უფრო ახლოს იყო ${l} , მეორე რიცხვი იყო ${k}`;
+    }
+}
+console.log(findNear100(99, 80));
+console.log(findNear100(79, 80));
+// 33
+function check70to100(num10, num11) {
+    if((num10 >= 40 && num10 <= 60) && (num11 >= 40 && num11 <= 60)) {
+        return `your nums was inclusive 40-60, your num was ${num10} and ${num11}`;
+    }
+    if((num10 >= 70 && num10 <= 100) && (num10 >= 70 && num10 <= 100)) {
+        return `your nums was inclusive 70-100, your num was ${num10} and ${num11}`;
+    }
+    return `your number is not unclusive 40-60 and 70-100. your nums were ${num10} and ${num11}`;
+    }
+console.log(check70to100(50, 60));
+console.log(check70to100(70, 80));
+console.log(check70to100(60, 30));
+// 34
+function findMostLarge(one, two) {
+    if((one >= 40 && one <= 60) && (two >= 40 && two <= 60)) {
+        return one > two ? one : two;
+    }
+    return `your numbers it was not inclusive 40-60`;
+}
+console.log(findMostLarge(45, 40));
+console.log(findMostLarge(45, 50));
+console.log(findMostLarge(65, 70));
+// 35
+function check2To4Inclusive(three, four) {
+    const inclusive = three.substring(1, 4);
+    if (three.length < 4) {
+        return "სიტყვა არის ძალიან მოკლე";
+    } 
+    return three.includes(four) 
+    ? `ეს სიმბოლო "${four}" არსებობს შენს სიტყვაში 2 დან 4 ის ჩათვლით, შენი სიტყვა იყო "${three}"`
+    : `ეს სიმბოლო "${four}" არ არსებობს შენს სიტყვაში 2 დან 4 ის ჩათლით, შენი სიტყვა იყო "${three}"`
+}
+console.log(check2To4Inclusive("mshvidobit", "v"));
+console.log(check2To4Inclusive("gamarjoba", "v"));
+console.log(check2To4Inclusive("bar", "v"));
+// 36
+function chechLast(pirveli, meore, mesame) {
+    let num20 = pirveli % 10;
+    let num30 = meore % 10;
+    let num40 = mesame % 10;
+    if (num20 === num30 && num30 === num40) {
+        return `your last digit is same`
+    }
+    return `your last digit isnot same, try again`
+}
+console.log(chechLast(111, 211, 311));
+console.log(chechLast(111, 211, 312));
+console.log(chechLast(110, 210, 310));
+// 37
+function conventHigtCase(dzma){
+    if(dzma.length < 3) {
+        return dzma.toUpperCase();
+    }
+    else{
+        return dzma.slice(0, 3).toLowerCase() + dzma.slice(3).toUpperCase();
+    }
+}
+console.log(conventHigtCase("hi"));
+console.log(conventHigtCase("gamrjoba"));
+// 38
+function chechTotalMarks(jami, finaluri) {
+    if (finaluri){
+        return jami >= 90 
+        ? `congragulation you pass, your marks is A+, because you total marks was "${jami}"`
+        : `sorry You couldn't cross the barrier and recive it grade, your marks was "${jami}"`
+    }
+    else {
+        return jami >= 89 && jami <= 100 
+        ? `congragulation you pass, your marks is A+, because you total marks was "${jami}"`
+        : `sorry You couldn't cross the barrier and recive it grade, your marks was "${jami}"`
+    }
+}
+console.log(chechTotalMarks(89, "finaluri"))
+console.log(chechTotalMarks(89))
+console.log(chechTotalMarks(93, "final"))
+// 39
+function calculateSum(ten, twenty) {
+    const sum = ten + twenty;
+    if (sum >= 50 && sum <= 80) {
+        return `65 because your numbers sum was between 50-80, your number was ${sum}`;
+    }
+    else {
+        return `80 your numbers sum wasnot between 50-80, your number was ${sum}`;
+    }
+}
+console.log(calculateSum(40, 20));
+console.log(calculateSum(40, 5));
+// 40
+function checkIf8(num1, num2){
+    if (num1 === 8 || num2 === 8 || num1 + num2 === 8 || Math.abs(num1 - num2) === 8){
+        return true;
+    }
+        return false;
+}
+console.log(checkIf8(4, 4)); // sum is 8
+console.log(checkIf8(8, 4)); //first is 8
+console.log(checkIf8(12, 4)); //diferent is 8
+console.log(checkIf8(2, 4));  //  none is 8
+// 41
+function checkTreeNum(num1, num2, num3) {
+    if (num1 === num2 && num2 === num3) {
+        return 30;
+    }
+    if (num1 === num2 || num1 === num3 || num2 === num3) {
+        return 40;
+    }
+    else {
+        return 20;
+    }
+}
+console.log(checkTreeNum(2, 2, 2));
+console.log(checkTreeNum(2, 4, 2));
+console.log(checkTreeNum(2, 22, 1));
+// 42
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
 
