@@ -529,7 +529,71 @@ console.log(checkTreeNum(2, 2, 2));
 console.log(checkTreeNum(2, 4, 2));
 console.log(checkTreeNum(2, 22, 1));
 // 42
-aa
+function checkIfNumIsSoft(one, two, three) {
+    if (one < two && two < three) {
+        return "raghac mode";
+    }
+    if (one <= two && two <= three) {
+        return "soft mode";
+    }
+    else {
+        return "araferi";
+    }
+}
+console.log(checkIfNumIsSoft(1, 2, 3));
+console.log(checkIfNumIsSoft(2, 2, 3));
+console.log(checkIfNumIsSoft(3, 2, 3));
+// 43
+function chechLastDigit(pirv, meore, mesame) {
+    let num1 = pirv % 10;
+    let num2 = meore % 10;    // bolo cifrs ase vigeb
+    let num3 = mesame % 10;
+if (num1 === num2 || num2 === num3 || num1 === num3){
+    return "last digit is same";
+}
+    return "try again";
+}
+console.log(chechLastDigit(22, 32, 202));
+console.log(chechLastDigit(13, 32, 204));
+console.log(chechLastDigit(22, 31, 202));
+// 44
+function check20(num, num2, num3) {
+    if ((num1 >= 20 && (num1 < num2 || num1 < num3)) || 
+        (num2 >= 20 && (num2 < num1 || num2 < num3)) ||
+        (num3 > 20 && (num3 < num1 || num3 < num2))) {
+            return "malaci"
+        }
+    else{
+            return false;
+        }
+}
+console.log(check20(23, 20, 22));
+console.log(check20(16, 10, 12));
+console.log(check20(53, 20, 21));
+// 45
+function checkIf15(num1, num2){
+    if (num1 === 15 || num2 === 15 || num1 + num2 === 15 || Math.abs(num1 - num2) === 15){
+        return true;
+    }
+        return false;
+}
+console.log(checkIf15(15, 15)); 
+console.log(checkIf15(8, 15)); 
+console.log(checkIf15(16, 1)); 
+console.log(checkIf15(2, 4));  
+// 46
+function checkMultiple(one, two) {
+    let num1 = one % 7 === 0 || one % 11 === 0;
+    let num2 = two % 7 === 0 || two % 11 === 0;
+    return (num1 || num2 ) && !(num1 || num2);
+}
+console.log(checkMultiple(14, 14));
+console.log(checkMultiple(14, 20));
+
+
+
+
+
 
 
 
