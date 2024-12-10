@@ -439,7 +439,7 @@ console.log(findMostLarge(45, 50));
 console.log(findMostLarge(65, 70));
 // 35
 function check2To4Inclusive(three, four) {
-    const inclusive = three.substring(1, 4);
+    const inclusive = three.substring(1, 4); 
     if (three.length < 4) {
         return "სიტყვა არის ძალიან მოკლე";
     } 
@@ -585,10 +585,59 @@ console.log(checkIf15(2, 4));
 function checkMultiple(one, two) {
     let num1 = one % 7 === 0 || one % 11 === 0;
     let num2 = two % 7 === 0 || two % 11 === 0;
-    return (num1 || num2 ) && !(num1 || num2);
+    return (num1 || num2) && !(num1 && num2); 
 }
 console.log(checkMultiple(14, 14));
 console.log(checkMultiple(14, 20));
+console.log(checkMultiple(14, 26));
+// 47
+function check40TO10000(nums) {
+    if (nums >= 40 && nums <= 10000) {
+        return `your number is inclusive 40 - 10 000, beacuse your num was ${nums}`;
+    }
+    return `your number isnot inclusive 40 - 10 000, beacuse your num was ${nums}`;
+}
+console.log(check40TO10000(45));
+console.log(check40TO10000(25));
+// 48
+function reverse(what) {
+    return what.split('').reverse().join('');
+}
+console.log(reverse("barro"))
+// 49
+function replaceWithNextChar(str) {
+    return str.replace(/[a-zA-Z]/g, char => {
+        let code = char.charCodeAt(0) + 1;
+        if (char === 'z') return 'a';
+        if (char === 'Z') return 'A';
+        return String.fromCharCode(code);
+    });
+}
+console.log(replaceWithNextChar("kvati"));
+console.log(replaceWithNextChar("zura"));
+console.log(replaceWithNextChar("mamachemi")); 
+// 50
+function upCase(some) {
+    return some.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+console.log(upCase("zdarova biwebs, trusiki gviwers"));
+// 51
+function minutAndhours(total) {
+    let hours = Math.floor(total / 60);
+    let minuts = total % 60;
+    return `${hours} :hours and ${minuts} :minuts`;
+}
+console.log(minutAndhours(200));
+console.log(minutAndhours(40));
+// 52
+function sortStringAlphabetically(str) {
+    return str.split('').sort((a, b) => a.localeCompare(b)).join(''); 
+}
+console.log(sortStringAlphabetically("marojni")); 
+console.log(sortStringAlphabetically("sumka"));
+console.log(sortStringAlphabetically("zmeika"));
+// 53
+
 
 
 
