@@ -637,6 +637,99 @@ console.log(sortStringAlphabetically("marojni"));
 console.log(sortStringAlphabetically("sumka"));
 console.log(sortStringAlphabetically("zmeika"));
 // 53
+function aAndB(str) {
+    const check = /a...b|b...a/;
+    return check.test(str);
+}
+console.log(aAndB(`is ${"babilina"} true?`));
+console.log(aAndB(`is ${"gamarjob"} true?`));
+// 54
+function countVowels(str) {
+    const vowels = /[aeiou]/gi;
+    const matches = str.match(vowels);
+    return matches ? matches.length : 0;
+}
+const inputString = "Hello World!";
+const vowelCount = countVowels(inputString);
+console.log(`Number of vowels in "${inputString}":`, vowelCount);
+// 55
+function hasEqualPsAndTs(str) {
+    const firststr = str.toLowerCase();
+    const p = (firststr.match(/p/g) || []).length;
+    const t = (firststr.match(/t/g) || []).length;
+    return p === t;
+}
+const inputString1 = "potato";
+const inputString2 = "pasportti";
+console.log(`შეიცავს "${inputString1}" თანაბარი რაოდენობის t ს და p ს'?`, hasEqualPsAndTs(inputString1));
+console.log(`შეიცავს "${inputString1}" თანაბარი რაოდენობის t ს და p ს'?`, hasEqualPsAndTs(inputString2)); 
+// 56
+function divideAndFormat(num1, num2) {
+    if (num2 === 0) {
+        return "Division by zero is not allowed.";
+    }
+    const result = num1 / num2;
+    const formattedResult = result.toLocaleString("en-US", {
+        maximumFractionDigits: 2, 
+    });
+    return formattedResult;
+}
+const number1 = 1234567;
+const number2 = 890;
+console.log(`Result: ${divideAndFormat(number1, number2)}`);
+// 57
+function createCopies(str, count) {
+    if (count < 0) {
+        return "Count must be a positive number.";
+    }
+    return str.repeat(count);
+}
+const inpString = "barp";
+const copies = 4;
+console.log(`Result: "${createCopies(inputString, copies)}"`);
+// 58
+function createUpdatedString(str) {
+    if (str.length < 3) {
+        return "String length must be at least 3.";
+    }
+    const lastThreeChars = str.slice(-3);
+    return lastThreeChars.repeat(4);
+}
+const inputString11 = "JavaScript";
+const inputString22 = "abc";
+const inputString3 = "xy";
+console.log(createUpdatedString(inputString11));
+console.log(createUpdatedString(inputString22));
+console.log(createUpdatedString(inputString3));
+// 59
+function extractFirstHalf(str) {
+    if (str.length % 2 !== 0) {
+        return "String length is not even.";
+    }
+    const halfLength = str.length / 2;
+    return str.slice(0, halfLength);
+}
+const inputString12 = "JavaScript";
+const inputString23 = "HelloWorld";
+const inputString34 = "OddLength";
+console.log(extractFirstHalf(inputString12));
+console.log(extractFirstHalf(inputString23)); 
+console.log(extractFirstHalf(inputString34)); 
+// 60
+function removeFirstAndLast(str) {
+    if (str.length <= 2) {
+        return "String is too short to remove first and last characters.";
+    }
+    return str.slice(1, -1);
+}
+const inputString111 = "JavaScript";
+const inputString222 = "Hi";
+const inputString333 = "A";
+console.log(removeFirstAndLast(inputString111));
+console.log(removeFirstAndLast(inputString222)); 
+console.log(removeFirstAndLast(inputString333));
+
+
 
 
 
