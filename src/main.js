@@ -439,7 +439,6 @@ console.log(findMostLarge(45, 50));
 console.log(findMostLarge(65, 70));
 // 35
 function check2To4Inclusive(three, four) {
-    const inclusive = three.substring(1, 4); 
     if (three.length < 4) {
         return "სიტყვა არის ძალიან მოკლე";
     } 
@@ -603,7 +602,7 @@ console.log(check40TO10000(25));
 function reverse(what) {
     return what.split('').reverse().join('');
 }
-console.log(reverse("barro"))
+console.log(reverse("barro"));
 // 49
 function replaceWithNextChar(str) {
     return str.replace(/[a-zA-Z]/g, char => {
@@ -733,7 +732,7 @@ function conectTwoWord(one, two) {
     let sum = one.slice(1) + two.slice(1);
     return sum;
 }
-console.log(conectTwoWord("zdarova", "kaci"))
+console.log(conectTwoWord("zdarova", "kaci"));
 // 62
 function moveThreeChatStart(move) {
     if (move.length <= 3) {
@@ -759,7 +758,7 @@ function conectTwoString(one, two) {
     let result = one + two;
     return result;
 }
-console.log(conectTwoString("salama", "neiqum"))
+console.log(conectTwoString("salama", "neiqum"));
 // 65
 function isEndScript(sityva) {
     if (sityva.length < 6) {
