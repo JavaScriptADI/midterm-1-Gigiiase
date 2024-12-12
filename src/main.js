@@ -666,7 +666,7 @@ console.log(`შეიცავს "${inputString1}" თანაბარი �
 // 56
 function divideAndFormat(num1, num2) {
     if (num2 === 0) {
-        return "Division by zero is not allowed.";
+        return "ნულზე გაყოფა";
     }
     const result = num1 / num2;
     const formattedResult = result.toLocaleString("en-US", {
@@ -674,60 +674,105 @@ function divideAndFormat(num1, num2) {
     });
     return formattedResult;
 }
-const number1 = 1234567;
-const number2 = 890;
-console.log(`Result: ${divideAndFormat(number1, number2)}`);
+const number1 = 230121;
+const number2 = 720;
+console.log(`შედეგი: ${divideAndFormat(number1, number2)}`);
 // 57
 function createCopies(str, count) {
     if (count < 0) {
-        return "Count must be a positive number.";
+        return "დადებითი უნდა იყოს რიცხვი";
     }
     return str.repeat(count);
 }
-const inpString = "barp";
-const copies = 4;
-console.log(`Result: "${createCopies(inputString, copies)}"`);
+const inpString = "ბარო";
+const copies = 2;
+console.log(`Result: "${createCopies(inpString, copies)}"`);
 // 58
-function createUpdatedString(str) {
-    if (str.length < 3) {
-        return "String length must be at least 3.";
+function createUpdatedString(something) {
+    if (something.length < 3) {
+        return "მინიმალური სიგრძე უნდა იყოს 3";
     }
-    const lastThreeChars = str.slice(-3);
+    const lastThreeChars = something.slice(-3);
     return lastThreeChars.repeat(4);
 }
-const inputString11 = "JavaScript";
-const inputString22 = "abc";
-const inputString3 = "xy";
-console.log(createUpdatedString(inputString11));
-console.log(createUpdatedString(inputString22));
-console.log(createUpdatedString(inputString3));
+const pirveli = "gamarjoba";
+const meore = "ravaxar";
+const mesame = "oe";
+console.log(createUpdatedString(pirveli));
+console.log(createUpdatedString(meore));
+console.log(createUpdatedString(mesame));
 // 59
 function extractFirstHalf(str) {
     if (str.length % 2 !== 0) {
-        return "String length is not even.";
+        return "it must be even.";
     }
-    const halfLength = str.length / 2;
-    return str.slice(0, halfLength);
+    const half = str.length / 2;
+    return str.slice(0, half);
 }
-const inputString12 = "JavaScript";
-const inputString23 = "HelloWorld";
-const inputString34 = "OddLength";
-console.log(extractFirstHalf(inputString12));
-console.log(extractFirstHalf(inputString23)); 
-console.log(extractFirstHalf(inputString34)); 
+const first = "megobaro";
+const second = "samyaro";
+const third = "zustadsami";
+console.log(extractFirstHalf(first));
+console.log(extractFirstHalf(second)); 
+console.log(extractFirstHalf(third)); 
 // 60
 function removeFirstAndLast(str) {
     if (str.length <= 2) {
-        return "String is too short to remove first and last characters.";
+        return "სიტყვა მოკლეა იმისთვის რომ მოვაშოროთ პირველი და ბოლო ასო";
     }
     return str.slice(1, -1);
 }
-const inputString111 = "JavaScript";
-const inputString222 = "Hi";
-const inputString333 = "A";
+const inputString111 = "kacurikaci";
+const inputString222 = "ma";
+const inputString333 = "rasapireb";
 console.log(removeFirstAndLast(inputString111));
 console.log(removeFirstAndLast(inputString222)); 
 console.log(removeFirstAndLast(inputString333));
+// 61
+function conectTwoWord(one, two) {
+    let sum = one.slice(1) + two.slice(1);
+    return sum;
+}
+console.log(conectTwoWord("zdarova", "kaci"))
+// 62
+function moveThreeChatStart(move) {
+    if (move.length <= 3) {
+        return "it must be 3";
+    }
+    let boloSami = move.slice(-3);
+    let danarcheni = move.slice(0, -3);
+    return boloSami + danarcheni;
+}
+console.log(moveThreeChatStart("salami"));
+// 63
+function moveMiddleThreeChar(shua) {
+    if (shua.length < 3 || shua.length % 2 === 0) {
+        return "it must be 3 and odd";
+    }
+    let shuaIndex = Math.floor(shua.length / 2);
+    return shua.slice(shuaIndex -1, shuaIndex +2);
+}
+console.log(moveMiddleThreeChar("pamagidze"));
+console.log(moveMiddleThreeChar("salami"));
+// 64
+function conectTwoString(one, two) {
+    let result = one + two;
+    return result;
+}
+console.log(conectTwoString("salama", "neiqum"))
+// 65
+function isEndScript(sityva) {
+    if (sityva.length < 6) {
+        return "min it must be 6";
+    }
+    if (sityva.toLowerCase().endsWith("script")) {
+        return "your word is ending script";
+    }
+    return "Your word does not end with 'script'.";
+}
+console.log(isEndScript("javascript"));
+console.log(isEndScript("marojniscr"));
+
 
 
 
