@@ -804,7 +804,7 @@ function checkLengthN(sityva, n) {
         let lastTwo = sityva.substring(sityva.length - n);
         return fisrtTwo + lastTwo;
     }
-    return "sityva aris very short"
+    return "sityva aris very short";
 }
 console.log(checkLengthN("gamarjoba", 2));
 console.log(checkLengthN("vashlu", 1));
