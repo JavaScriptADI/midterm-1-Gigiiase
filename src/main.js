@@ -771,6 +771,83 @@ function isEndScript(sityva) {
 }
 console.log(isEndScript("javascript"));
 console.log(isEndScript("marojniscr"));
+// 66
+function checkCity(city) {
+    if (city.startsWith("los") || city.startsWith("new")) {
+        return city;
+    }
+    return "";
+}
+console.log(checkCity("usa"));
+console.log(checkCity("new-york"));
+console.log(checkCity("los-angeles"));
+console.log(checkCity("posle-briwia"));
+// 67
+function checkPchar(p) {
+    if (p[0].toLowerCase() === 'p' || p[p.length - 1].toLowerCase() === 'p') {
+        if (p[0].toLowerCase() === 'p') {
+            p = p.substring(1);
+        }
+        if (p[p.length - 1].toLowerCase() === 'p') {
+            p = p.substring(0, p.length - 1);
+        }
+    }
+    return p;
+}
+console.log(checkPchar("python"));
+console.log(checkPchar("zauri"));
+console.log(checkPchar("zairap"));
+// 68
+function checkLengthN(sityva, n) {
+    if (sityva.length >= n) {
+        let fisrtTwo = sityva.substring(0, n);
+        let lastTwo = sityva.substring(sityva.length - n);
+        return fisrtTwo + lastTwo;
+    }
+    return "sityva aris very short"
+}
+console.log(checkLengthN("gamarjoba", 2));
+console.log(checkLengthN("vashlu", 1));
+console.log(checkLengthN("hellllou", 3));
+// 69
+function sumThreeEl(element) {
+    if (element.length === 3) {
+        return element[0] + element[1] + element[2];
+    }
+    else {
+        return "unda iyos minimum 3 elementi";
+    }
+}
+console.log(sumThreeEl([1, 2, 10]));
+console.log(sumThreeEl([21, 22, 10]));
+console.log(sumThreeEl([11, 2, -10]));
+console.log(sumThreeEl([2, -10]));
+// 70
+function rotateArr(aray){
+    if (aray.length === 3) {
+        return[aray[1], aray[2], aray [0]];
+    }
+    else {
+        return "aray unda iyos minimum 3";
+    }
+}
+console.log(rotateArr([10, 11, -1]));
+console.log(rotateArr([2, 3, -21]));
+// 71
+function checkFandL(array) {
+    if (array.length >= 1) {
+        return array[0] === 1 || array[array.length - 1] === 1;
+    } else {
+        return "Array unda iyos 1 ze meti.";
+    }
+}
+console.log(checkFandL([1, 4, 5]));
+console.log(checkFandL([1, 6, 1]));
+console.log(checkFandL([7, 5, 6]));
+console.log(checkFandL([]));
+// 72
+
+
 
 
 
