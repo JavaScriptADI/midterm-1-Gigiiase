@@ -846,6 +846,122 @@ console.log(checkFandL([1, 6, 1]));
 console.log(checkFandL([7, 5, 6]));
 console.log(checkFandL([]));
 // 72
+function checkFirstAndThird(sityva) {
+    if(sityva.length !== 3) {
+        return `false ricxbvebi unda iyos minum 3`;
+    }
+    return sityva[0] === sityva[2];
+}
+console.log(checkFirstAndThird([2, 5, 2]));
+console.log(checkFirstAndThird([2, 5, 1]));
+console.log(checkFirstAndThird([2, 5]));
+// 73
+function reverseNums(nums) {
+    if(nums.length !== 3) {
+        return false;
+    }
+    return nums.reverse();
+}
+console.log(reverseNums([10, 20, 23]));
+console.log(reverseNums([10, 23]));
+console.log(reverseNums([10, 110, 23]));
+// 74
+function checkWhichIsMore(ricxvi) {
+    if(ricxvi.length <= 2) {
+        return false ;
+    }
+    let large = Math.max(ricxvi[0], ricxvi[ricxvi.length - 1]);
+    return ricxvi.map(() => large);
+}
+console.log(checkWhichIsMore([2, 1, 20]));
+console.log(checkWhichIsMore([1, 1, 1]));
+console.log(checkWhichIsMore([2, 20]));
+// 75
+function middleEl(one, two) {
+    if(one.length !== 3 || two.length !== 3) {
+        return `orive array unda udrides min 3s`;
+    }
+    return [one[1], two[1]];
+}
+console.log(middleEl([1, 2, 3], [2, 5, 7]));
+console.log(middleEl([1, 5, 3], [2, 0, 7]));
+console.log(middleEl([1, 2], [2, 5, 7]));
+// 76
+function createNewArr(array) {
+    if (array.length < 1) {
+        return `array unda iyos min : 1`;
+    }
+    return [array[0], array[array.length - 1]];
+}
+console.log(createNewArr([1, 4, 8, 9]));
+console.log(createNewArr([1, 2, 3]));
+console.log(createNewArr([]));
+// 77
+function checkArr(arr) {
+    if(arr.length !== 2) {
+        return false;
+    }
+    return arr.includes(1) || arr.includes(3);
+}
+console.log(checkArr([2, 3]));
+console.log(checkArr([2, 2]));
+console.log(checkArr([3, 4]));
+console.log(checkArr([3]));
+// 78
+function arrayCheck(arr) {
+    if(arr.length !== 2) {
+        return false;
+    }
+    return !arr.includes(1) && !arr.includes(3);
+}
+console.log(arrayCheck([5, 6]));
+console.log(arrayCheck([6, 3]));
+console.log(arrayCheck([5]));
+// 79
+function ifNumIs30To40(nums) {
+    if(nums.length > 2) {
+        return false;
+    }
+    const sami = nums.filter(num => num === 30).length;
+    const otxi = nums.filter(num => num === 40).length;
+    return sami === 2 && otxi === 2;
+}
+console.log(ifNumIs30To40([1, 2, 30]));
+console.log(ifNumIs30To40([30, 40]));
+// 80
+function changeFIrstAndLast(number) {
+    if(number.length <= 1) {
+        return false;
+    }
+    if (number.length === 1) {
+        return number;
+    }
+    let change = number[0];
+    number[0] = number[number.length - 1];
+    number[number.length - 1] = change;
+    return number;
+}
+console.log(changeFIrstAndLast([2, 3, 4, 5]));
+console.log(changeFIrstAndLast([2])); 
+// 81
+function addTwoDigits(num) {
+    if (num < 10 || num > 99) {
+        console.log("The number must be a positive integer of length 2.");
+        return null;
+    }
+
+    const digits = num.toString().split("").map(Number);
+    return digits[0] + digits[1];
+}
+
+// Test cases
+console.log(addTwoDigits(23)); // 5
+console.log(addTwoDigits(78)); // 15
+console.log(addTwoDigits(10)); // 1
+console.log(addTwoDigits(99)); // 18
+
+
+
 
 
 
