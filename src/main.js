@@ -944,21 +944,107 @@ function changeFIrstAndLast(number) {
 console.log(changeFIrstAndLast([2, 3, 4, 5]));
 console.log(changeFIrstAndLast([2])); 
 // 81
-function addTwoDigits(num) {
+function addTwoNum(num) {
     if (num < 10 || num > 99) {
         console.log("The number must be a positive integer of length 2.");
         return null;
     }
-
     const digits = num.toString().split("").map(Number);
     return digits[0] + digits[1];
 }
+console.log(addTwoNum(56)); 
+console.log(addTwoNum(11)); 
+console.log(addTwoNum(15)); 
+console.log(addTwoNum(76)); 
+// 82
+function addTwoDigit(num1, num2) {
+    let sum = 0;
+    let factor = 1;
+    while (num1 > 0 || num2 > 0) {
+        let ricxvi1 = num1 % 10;
+        let ricxvi2 = num2 % 10;
+        let ricxvebiSum = (ricxvi1 + ricxvi2) % 10;
+        sum += ricxvebiSum * factor; 
+        factor *= 10; 
+        num1 = Math.floor(num1 / 10);
+        num2 = Math.floor(num2 / 10);
+    }
+    return sum;
+}
+console.log(addTwoDigit(777, 111));
+console.log(addTwoDigit(234, 123)); 
+// 83
+function findLongStr(strings) {
+    if (strings.length === 0) {
+        return null; 
+    }
+    let longStr = "";
+    for (const str of strings) {
+        if (str.length > longStr.length) {
+            longStr = str;
+        }
+    }
+    return longStr;
+}
+let cvladi = ["zura", "gia", "banani", "ludi", "yvanchala"];
+console.log(findLongStr(cvladi));
+let cvladi1 = [];
+console.log(findLongStr(cvladi1));
+// 84
+function replaceWithNextChar(str) {
+    let result = "";
+    for (const char of str) {
+        if (char >= 'a' && char <= 'z') {
+            result += char === 'z' ? 'a' : String.fromCharCode(char.charCodeAt(0) + 1);
+        } else if (char >= 'A' && char <= 'Z') {
+            result += char === 'Z' ? 'A' : String.fromCharCode(char.charCodeAt(0) + 1);
+        } else {
+            result += char;
+        }
+    }
+    return result;
+}
+console.log(replaceWithNextChar("hello")); 
+console.log(replaceWithNextChar("Zoo"));  
+console.log(replaceWithNextChar("aBcZ!")); 
+// 85
+function addSumArray(array) {
+    let first = 0;
+    let second = 0;
+    for (let x = 0; x < array.length; x++) {
+        if (x % 2 === 0) {
+            first += array[x]; 
+        } else {
+            second += array[x]; 
+        }
+    }
+    return [first, second];
+}
+let arr = [1, 2, 3, 4, 10, 20, 30, 40];
+console.log(addSumArray(arr)); 
+// 86
+function findAngle(ang) {
+    if (ang > 0 && ang < 90) {
+        return `mwvave kutxe`;
+    }
+    if (ang === 90) {
+        return `swori kutxe`;
+    }
+    if (ang > 90 && ang < 180) {
+        return `blagvi kutxe`;
+    }
+    if (ang === 180) {
+        return `swori kutxe`;
+    }
+    else {
+        return `araferi gamova shengan`;
+    }
+}
+console.log(findAngle(50));
+console.log(findAngle(200));
+console.log(findAngle(180));
 
-// Test cases
-console.log(addTwoDigits(23)); // 5
-console.log(addTwoDigits(78)); // 15
-console.log(addTwoDigits(10)); // 1
-console.log(addTwoDigits(99)); // 18
+
 
 
 
