@@ -604,7 +604,7 @@ function reverse(what) {
 }
 console.log(reverse("barro"));
 // 49
-function replaceWithNextChar(str) {
+function changeStr(str) {
     return str.replace(/[a-zA-Z]/g, char => {
         let code = char.charCodeAt(0) + 1;
         if (char === 'z') return 'a';
@@ -612,9 +612,9 @@ function replaceWithNextChar(str) {
         return String.fromCharCode(code);
     });
 }
-console.log(replaceWithNextChar("kvati"));
-console.log(replaceWithNextChar("zura"));
-console.log(replaceWithNextChar("mamachemi")); 
+console.log(changeStr("kvati"));
+console.log(changeStr("zura"));
+console.log(changeStr("mamachemi")); 
 // 50
 function upCase(some) {
     return some.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -991,7 +991,7 @@ console.log(findLongStr(cvladi));
 let cvladi1 = [];
 console.log(findLongStr(cvladi1));
 // 84
-function replaceWithNextChar(str) {
+function changeStr(str) {
     let result = "";
     for (const char of str) {
         if (char >= 'a' && char <= 'z') {
@@ -1004,9 +1004,9 @@ function replaceWithNextChar(str) {
     }
     return result;
 }
-console.log(replaceWithNextChar("hello")); 
-console.log(replaceWithNextChar("Zoo"));  
-console.log(replaceWithNextChar("aBcZ!")); 
+console.log(changeStr("hello")); 
+console.log(changeStr("Zoo"));  
+console.log(changeStr("aBcZ!")); 
 // 85
 function addSumArray(array) {
     let first = 0;
